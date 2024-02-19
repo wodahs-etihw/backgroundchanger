@@ -6,11 +6,12 @@ import Button from "./components/Button";
 import Colorselector from "./components/Colorselector";
 
 function App() {
-  const [color, setColor] = useState("black");
+  const [color, setColor] = useState("red");
 
   const handleBackgroundColorChange = (newColor) => {
     setColor(newColor);
   };
+
 
   return (
     <>
@@ -21,89 +22,90 @@ function App() {
         
         <div class="w-full bg-stone-50 flex flex-row justify-around ">
           <div class="mt-6">
-            <Colorselector onColorChange={handleBackgroundColorChange} />{" "}
+            <Colorselector clickedValue={color} onColorChange={handleBackgroundColorChange} />
           </div>
+
           <div className="mt-6">
             <Button
-              color="purple"
-              name="Purple"
-              onClick={handleBackgroundColorChange}
+              color="#800080"
+              name="purple"
+              onButtonClick={handleBackgroundColorChange}
             />
           </div>
           <div className="mt-6">
             <Button
-              color="red"
-              name="Red"
-              onClick={handleBackgroundColorChange}
+              color="#FF0000"
+              name="red"
+              onButtonClick={handleBackgroundColorChange}
             />
           </div>
           <div className="mt-6">
             <Button
-              color="yellow"
-              name="Yellow"
-              onClick={handleBackgroundColorChange}
+              color="#FFFF00"
+              name="yellow"
+              onButtonClick={handleBackgroundColorChange}
             />
           </div>
           <div className="mt-6">
             <Button
-              color="orange"
-              name="Orange"
-              onClick={handleBackgroundColorChange}
+              color="#FFA500"
+              name="orange"
+              onButtonClick={handleBackgroundColorChange}
             />
           </div>
           <div className="mt-6">
             <Button
-              color="blue"
+              color="#0000FF"
               name="Blue"
-              onClick={handleBackgroundColorChange}
+              onButtonClick={handleBackgroundColorChange}
             />
           </div>
           <div className="mt-6">
             <Button
-              color="teal"
+              color="#008080"
               name="Teal"
-              onClick={handleBackgroundColorChange}
+              onButtonClick={handleBackgroundColorChange}
             />
           </div>
           <div className="mt-6">
             <Button
-              color="pink"
+              color="#FFC0CB"
               name="Pink"
-              onClick={handleBackgroundColorChange}
+              onButtonClick={handleBackgroundColorChange}
             />
           </div>
           <div className="mt-6">
             <Button
-              color="cyan"
+              color="#00FFFF"
               name="Cyan"
-              onClick={handleBackgroundColorChange}
+              onButtonClick={handleBackgroundColorChange}
             />
           </div>
           <div className="mt-6">
             <Button
-              color="indigo"
+              color="#4B0082"
               name="Indigo"
-              onClick={handleBackgroundColorChange}
+              onButtonClick={handleBackgroundColorChange}
             />
           </div>
           <div className="mt-6">
             <Button
-              color="brown"
+              color="#A52A2A"
               name="Brown"
-              onClick={handleBackgroundColorChange}
+              onButtonClick={handleBackgroundColorChange}
             />
           </div>
           <div className="mt-6">
             <Button
-              color="gray"
+              color="#808080"
               name="Gray"
-              onClick={handleBackgroundColorChange}
+              onButtonClick={handleBackgroundColorChange}
             />
           </div>
         </div>
         <div>
           <div class="bg-stone-50 text-center pt-4" >
-          <h4>Background Color Picker</h4>
+          <h4 class="uppercase font-bold" >Background Color Picker</h4>
           </div>
        
         </div>

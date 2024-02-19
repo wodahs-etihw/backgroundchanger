@@ -1,13 +1,21 @@
 import React from "react";
-import { useState } from "react";
+import { useState , useEffect ,useRef } from "react";
 
-function Colorselector({ onColorChange }) {
-  const [selectedColor, setSelectedColor] = useState("#2563eb");
+function Colorselector({ onColorChange , clickedValue }) {
+  console.log(clickedValue);
+  const [selectedColor, setSelectedColor] = useState(clickedValue);
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    setSelectedColor(clickedValue); // Update the selectedColor state when clickedValue prop changes
+    inputRef.current.value = clickedValue; // Reset the input value manually
+  }, [clickedValue]);
 
   const handleColorChange = (e) => {
     console.log(e.target.value);
-    setSelectedColor(e.target.value);
-    onColorChange(e.target.value);
+    const color = e.target.value;
+    setSelectedColor(color);
+    onColorChange(color);
   };
 
   return (
@@ -20,6 +28,7 @@ function Colorselector({ onColorChange }) {
       </label> */}
       <input
         type="color"
+        ref={inputRef}
         class="p-1 h-10 w-14 block bg-white border border-gray-200 cursor-pointer rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700"
         id="hs-color-input"
         value={selectedColor}
