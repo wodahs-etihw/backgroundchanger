@@ -6,7 +6,7 @@ import Button from "./components/Button";
 import Colorselector from "./components/Colorselector";
 
 function App() {
-  const [color, setColor] = useState("red");
+  const [color, setColor] = useState("black");
 
   const handleBackgroundColorChange = (newColor) => {
     setColor(newColor);
