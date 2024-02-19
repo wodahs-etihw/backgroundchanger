@@ -18,6 +18,7 @@ function App() {
         class="h-screen flex flex-col-reverse"
         style={{ backgroundColor: color }}
       >
+        
         <div class="w-full bg-stone-50 flex flex-row justify-around ">
           <div class="mt-6">
             <Colorselector onColorChange={handleBackgroundColorChange} />{" "}
@@ -99,6 +100,12 @@ function App() {
               onClick={handleBackgroundColorChange}
             />
           </div>
+        </div>
+        <div>
+          <div class="bg-stone-50 text-center pt-4" >
+          <h4>Background Color Picker</h4>
+          </div>
+       
         </div>
       </div>
     </>
