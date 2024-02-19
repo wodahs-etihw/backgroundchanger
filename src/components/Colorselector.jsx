@@ -29,7 +29,8 @@ function Colorselector({ onColorChange , clickedValue }) {
       <input
         type="color"
         ref={inputRef}
-        class="p-1 h-10 w-14 block bg-white border border-gray-200 cursor-pointer rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700"
+        
+        class="p-1 h-10 w-1/2 block mx-auto bg-white border border-gray-200 cursor-pointer rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700"
         id="hs-color-input"
         value={selectedColor}
         title="Choose your color"

@@ -12,19 +12,13 @@ function App() {
     setColor(newColor);
   };
 
-
   return (
     <>
       <div
         class="h-screen flex flex-col-reverse"
         style={{ backgroundColor: color }}
       >
-        
         <div class="w-full bg-stone-50 flex flex-row justify-around ">
-          <div class="mt-6">
-            <Colorselector clickedValue={color} onColorChange={handleBackgroundColorChange} />
-          </div>
-
           <div className="mt-6">
             <Button
               color="#800080"
@@ -104,10 +98,16 @@ function App() {
           </div>
         </div>
         <div>
-          <div class="bg-stone-50 text-center pt-4" >
-          <h4 class="uppercase font-bold" >Background Color Picker</h4>
+          
+          <div class="bg-stone-50 text-center pt-4 pb-4">
+            <h4 class="uppercase font-bold">Background Color Picker</h4>
           </div>
-       
+          <div class="bg-stone-50">
+            <Colorselector
+              clickedValue={color}
+              onColorChange={handleBackgroundColorChange}
+            />
+          </div>
         </div>
       </div>
     </>
